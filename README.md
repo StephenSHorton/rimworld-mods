@@ -29,6 +29,19 @@ Linked benches already copied the recipe list. The "do this many times" and "unt
 
 The assembly and class names are unchanged, so workbench links already in a save still load. Unlink benches before removing the mod.
 
+## EdB Prepare Carefully
+
+- Original by EdB (edbmods)
+- Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=735106432
+- Source: https://github.com/edbmods/EdBPrepareCarefully
+- License: MIT (see `PrepareCarefully/LICENSE`)
+- Package id: `horton.preparecarefully`
+- Disable Workshop package `EdB.PrepareCarefully`
+
+Randomize was keeping the Baseliner xenotype forced, and that skips the genes that choose skin color, hair color, hair, beard, head, and body. Skin stayed the default light color. Appearance randomize now rolls a new colonist and copies those cosmetic genes. A full randomize no longer forces Baseliner, so a new xenotype roll includes them too. A xenotype you picked on purpose is still kept.
+
+Preset files stored one id on every colonist (`Guid.NewGuid()` came back identical), so every relationship loaded as the same person. Saving now gives each pawn their own id. A preset that already has the shared id cannot tell the relationships apart, so those links are dropped instead of being glued to one colonist. Set them again and save a new preset.
+
 ## Build
 
 Each mod builds with the .NET SDK. RimWorld and Harmony come from the `Krafs.Rimworld.Ref` and `Lib.Harmony.Ref` packages.
@@ -36,6 +49,7 @@ Each mod builds with the .NET SDK. RimWorld and Harmony come from the `Krafs.Rim
 ```powershell
 dotnet build SimpleStockpilePresets\Source\SimpleStockpilePresets\SimpleStockpilePresets.csproj -c Release
 dotnet build WorkbenchConnect\Source\WorkbenchConnect\WorkbenchConnect.csproj -c Release
+dotnet build PrepareCarefully\EdBPrepareCarefully.csproj -c Release
 ```
 
 The DLLs land in each mod's `Assemblies` folder. RimWorld loads a folder that contains `About\About.xml`. Point it at these two folders, or junction them into `RimWorld\Mods`.

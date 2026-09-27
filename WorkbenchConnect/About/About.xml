@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Workbench Connect</name>
+  <author>jungooji</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <packageId>horton.workbenchconnect</packageId>
+  <description>Local fix of Workbench Connect.
+
+Original by jungooji.
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3524727262
+Source: https://github.com/zzzz465/WorkbenchConnect
+
+Linked workbenches share bills. Changing how many times a bill runs, or the "until you have" count, is copied to the other linked benches too.
+
+Disable the Workshop copy (jungooji.workbenchconnect) while this one is active. Safe to add mid-game. Before removing the mod, unlink the benches. If you already removed it, save and load once.
+
+This build keeps the original WorkbenchConnect assembly and class names so existing links still load.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>brrainz.harmony</li>
+    <li>andromeda.nicebilltab</li>
+  </loadAfter>
+</ModMetaData>

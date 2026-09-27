@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Simple Stockpile Presets</name>
+  <packageId>horton.simplestockpilepresets</packageId>
+  <author>Lanilor, Mlie</author>
+  <url>https://github.com/StephenSHorton/rimworld-mods</url>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>Local fix of Simple Stockpile Presets.
+
+Original by Lanilor. Continued by Mlie.
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2189006791
+Source: https://github.com/emipa606/SimpleStockpilePresets
+License: MIT. French translation by Imprécation.
+
+Select a stockpile or shelf, open the Storage tab, and use Select preset. The same button is also on the selection bar.
+
+Disable the Workshop copy (Mlie.SimpleStockpilePresets) while this one is active.</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
+</ModMetaData>
